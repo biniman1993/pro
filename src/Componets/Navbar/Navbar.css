@@ -1,0 +1,311 @@
+/* Navbar.css */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: transparent;  /* ✅ makes navbar see-through */
+  color: #fff;
+  position: absolute;       /* ✅ sits on top of background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;             /* ✅ keeps it above everything */
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+/* Left: Logo */
+.logo {
+  flex-shrink: 0;
+}
+
+.logo img {
+  height: 80px;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);   /* ✅ slight zoom on hover */
+}
+
+/* Right: Phone and Email */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0;
+}
+
+/* Menu list items */
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.menu li:hover {
+  color: #ff9800;
+}
+/* Blog button style */
+ul li.button-item {
+  background-color: #ff9800;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+ul li.button-item:hover {
+  background-color: #e68900;
+}
+
+.bars1 {
+  display: flex;
+  justify-content: center; /* center the whole list horizontally */
+  gap: 40px; /* spacing between each item */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center; /* vertically center items if needed */
+}
+.bars1 li {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.bars1 li.button-item {
+  padding: 8px 20px;
+  background-color: #ff9800;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.bars1 li.button-item:hover {
+  background-color: #e68900;
+}
+/* Full-width horizontal line under navbar */
+nav::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -35px; /* move line 5px below navbar; adjust as needed */
+  width: 100%;
+  height: 0.5px;
+  background-color: #f0efef;
+  opacity: 0.5;
+  z-index: 998;
+}
+
+
+/* Menu - Centered */
+.menu {
+  display: flex;
+  gap: 60px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+}
+
+/* Contact Info Styles - Modern Animated */
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-size: 0.9rem;
+  font-weight: 500;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animated background gradient on hover */
+.contact-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.contact-info:hover::before {
+  left: 100%;
+}
+
+/* Icon wrapper for better animation */
+.icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.contact-info .icon {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+}
+
+.contact-text {
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+/* Email Link Hover Effects */
+.email-link:hover {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 193, 7, 0.15));
+  border-color: rgba(255, 152, 0, 0.6);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3), 0 0 20px rgba(255, 152, 0, 0.2);
+}
+
+.email-link:hover .icon-wrapper {
+  transform: rotate(-10deg) scale(1.15);
+  animation: bounce 0.6s ease;
+}
+
+.email-link:hover .icon {
+  stroke: #ff9800;
+  filter: drop-shadow(0 0 8px rgba(255, 152, 0, 0.6));
+}
+
+.email-link:hover .contact-text {
+  color: #ffb74d;
+  transform: translateX(2px);
+}
+
+/* Phone Link Hover Effects */
+.phone-link:hover {
+  background: linear-gradient(135deg, rgba(33, 150, 243, 0.2), rgba(66, 165, 245, 0.15));
+  border-color: rgba(33, 150, 243, 0.6);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(33, 150, 243, 0.3), 0 0 20px rgba(33, 150, 243, 0.2);
+}
+
+.phone-link:hover .icon-wrapper {
+  transform: rotate(15deg) scale(1.15);
+  animation: shake 0.6s ease;
+}
+
+.phone-link:hover .icon {
+  stroke: #2196f3;
+  filter: drop-shadow(0 0 8px rgba(33, 150, 243, 0.6));
+}
+
+.phone-link:hover .contact-text {
+  color: #64b5f6;
+  transform: translateX(2px);
+}
+
+/* Pulse animation on icon wrapper */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) rotate(-10deg) scale(1.15); }
+  50% { transform: translateY(-5px) rotate(-10deg) scale(1.2); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(15deg) scale(1.15); }
+  25% { transform: translateX(-3px) rotate(12deg) scale(1.15); }
+  75% { transform: translateX(3px) rotate(18deg) scale(1.15); }
+}
+
+/* Active state */
+.contact-info:active {
+  transform: translateY(-1px) scale(0.98);
+  transition: all 0.1s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .menu {
+    gap: 40px;
+  }
+  
+  .contact-text {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-info .contact-text {
+    display: none;
+  }
+  
+  .contact-info {
+    padding: 10px 14px;
+    min-width: 44px;
+    justify-content: center;
+  }
+  
+  .icon-wrapper {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .menu {
+    gap: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 10px 15px;
+    gap: 20px;
+  }
+  
+  .contact-info {
+    padding: 8px 12px;
+  }
+  
+  .contact-info .icon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .icon-wrapper {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .menu {
+    gap: 20px;
+    font-size: 0.85rem;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .navbar-right {
+    gap: 8px;
+  }
+}

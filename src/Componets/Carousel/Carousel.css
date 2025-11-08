@@ -1,0 +1,147 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 80vh; /* same size as hero */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.prev {
+  opacity: 0;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Gradient overlay at top of images */
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Caption container */
+.caption {
+  position: absolute;
+  bottom: 50px;
+  left: 70px;
+  transform: translateY(100px);
+  opacity: 0;
+  z-index: 4;
+  transition: all 0.8s ease-out;
+}
+
+.caption.show-text {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Big title */
+.caption-title {
+  white-space: nowrap;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px 0;
+  text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* Description */
+.caption-description {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  max-width: 550px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* Read More Button */
+.caption-btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.caption-btn:hover {
+  background: #fff;
+  color: #000;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(255, 255, 255, 0.35);
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+  z-index: 5;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+}
+
+.nav.left {
+  left: 10px;
+}
+
+.nav.right {
+  right: 10px;
+}
+
+.nav:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .caption {
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    left: 20px;
+    bottom: 40px;
+    max-width: calc(100% - 40px);
+  }
+  
+  .gradient-overlay {
+    height: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .caption {
+    font-size: 1rem;
+    padding: 12px 18px;
+    left: 15px;
+    bottom: 30px;
+  }
+}

@@ -1,0 +1,103 @@
+.partners-section {
+  padding: 80px 40px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.partners-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #ff9800, #ff6b35);
+
+  /* Standard property */
+  background-clip: text;          /* Standard */
+  
+  /* Vendor prefixes for better support */
+  -webkit-background-clip: text;  /* Chrome, Safari, Edge */
+  -moz-background-clip: text;     /* Firefox (optional, rarely needed) */
+
+  color: transparent;             /* Make text itself transparent */
+  -webkit-text-fill-color: transparent; /* Chrome/Safari */
+}
+
+.partners-title:hover {
+  transform: scale(1.05);
+}
+
+.partners-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.partner-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.partner-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.partner-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+.partner-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.partner-hover {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  gap: 5px;
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover .partner-hover {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.partner-hover span {
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.partner-hover svg {
+  stroke: #ff9800;
+}
