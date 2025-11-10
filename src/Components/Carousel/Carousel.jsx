@@ -14,37 +14,37 @@ const slides = [
   {
     image: img1,
     title: "Printing Solutions",
-    description: "Empowering Progress Through Reliable Electronics"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img2,
     title: "Modern Laptops",
-    description: "Your Trusted Source for Government & Enterprise Electronics"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img3,
     title: "Cisco Products",
-    description: "Supplying Quality Technology for Every Mission"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img4,
     title: "Digital Display",
-    description: "Where Innovation Meets Dependability"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img5,
     title: "Modern TV & Boards",
-    description: "Leading Electronics Supplier for Government & Industry"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img6,
     title: "Advanced Tech Solutions",
-    description: "Powering Organizations with Modern Technology"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },
   {
     image: img7,
     title: "Premium Electronics",
-    description: "Delivering Excellence in Every Electronic Product"
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   }
 ];
 

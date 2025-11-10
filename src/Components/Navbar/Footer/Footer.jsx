@@ -48,7 +48,9 @@ const Footer = () => {
     'About Us',
     'Store Location',
     'Contact',
-    'Orders tracking'
+    'Career',
+    'Company Profile',
+    'Our Managements' 
   ];
 
   const helpLinks = [

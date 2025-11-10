@@ -5,24 +5,33 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: transparent;  /* ✅ makes navbar see-through */
-  color: #fff;
-  position: absolute;       /* ✅ sits on top of background image */
+  background: #020320; /* Slight transparent background for overlay */
+  color: #ffffff;
+  position: fixed;       /* Change from absolute -> fixed */
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;             /* ✅ keeps it above everything */
+  z-index: 999;          /* keep it on top */
   gap: 20px;
   box-sizing: border-box;
+  backdrop-filter: blur(10px); /* optional, makes it look modern */
+  transition: all 0.3s ease;
 }
 
+.navbar{
+height: 200px;
+ transform: translateY(-30px);
+
+}
 /* Left: Logo */
 .logo {
   flex-shrink: 0;
+     transform: translateY(-15px);
+
 }
 
 .logo img {
-  height: 80px;
+  height: 100px;
   transition: 0.3s ease;
 }
 
@@ -30,8 +39,9 @@ nav {
   transform: scale(1.05);   /* ✅ slight zoom on hover */
 }
 
-/* Right: Phone and Email */
+/* Right: Phone and Email navbar-right */
 .navbar-right {
+   transform: translateY(-15px);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -91,7 +101,7 @@ nav::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -35px; /* move line 5px below navbar; adjust as needed */
+  bottom: 70px; /* move line 5px below navbar; adjust as needed */
   width: 100%;
   height: 0.5px;
   background-color: #f0efef;
@@ -103,6 +113,7 @@ nav::after {
 /* Menu - Centered */
 .menu {
   display: flex;
+     transform: translateY(-15px);
   gap: 60px;
   list-style: none;
   margin: 0;
@@ -312,6 +323,7 @@ nav::after {
 
 /* Search container */
 .search-container {
+   transform: translateY(-15px);
   position: relative;
   display: flex;
   align-items: center;

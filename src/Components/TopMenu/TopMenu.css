@@ -1,14 +1,15 @@
 /* TopMenu Container */
 .topmenu {
-  position: absolute;
+  position: fixed;  
   top: 100px; /* position below navbar */
   left: 0;
   width: 100%;
-  z-index: 998;
+  z-index: 1000;
   background: transparent;
   padding: 12px 0;
   display: flex;
   justify-content: center; /* center the menu items horizontally */
+  
 }
 
 /* Horizontal list */

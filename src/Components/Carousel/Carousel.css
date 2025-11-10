@@ -3,6 +3,7 @@
   width: 100%;
   height: 80vh; /* same size as hero */
   overflow: hidden;
+  margin-top: 170px;
 }
 
 .slide {
@@ -43,7 +44,7 @@
 /* Caption container */
 .caption {
   position: absolute;
-  bottom: 50px;
+  bottom: 110px;
   left: 70px;
   transform: translateY(100px);
   opacity: 0;
@@ -70,14 +71,14 @@
 .caption-description {
   font-size: 1.3rem;
   color: #e0e0e0;
-  max-width: 550px;
+max-width: 1300px;
   line-height: 1.5;
   margin-bottom: 25px;
 }
 
 /* Read More Button */
 .caption-btn {
-  padding: 12px 30px;
+  padding: 15px 30px;
   font-size: 1rem;
   font-weight: 600;
   border: 2px solid #fff;
@@ -112,15 +113,19 @@
 
 .nav.left {
   left: 10px;
+  top: 40%;
+    background: transparent;
+
 }
 
 .nav.right {
   right: 10px;
+  top: 40%;
+    background: transparent;
+
+  
 }
 
-.nav:hover {
-  background: rgba(0,0,0,0.6);
-}
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
