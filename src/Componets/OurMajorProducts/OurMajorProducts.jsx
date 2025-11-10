@@ -43,6 +43,30 @@ const OurMajorProducts = () => {
       price: "Call for Price",
       image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
       action: "Add To Cart"
+    },
+     {
+      id: 6,
+      name: "AOC CU3462X/BK Canon",
+      status: "In stock",
+      price: "Call for Price",
+      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      action: "Add To Cart"
+    }
+    , {
+      id: 7,
+      name: "AOC CU3462X/BK Canon",
+      status: "In stock",
+      price: "Call for Price",
+      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      action: "Add To Cart"
+    },
+     {
+      id: 8,
+      name: "AOC CU3462X/BK Canon",
+      status: "In stock",
+      price: "Call for Price",
+      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      action: "Add To Cart"
     }
   ]);
 

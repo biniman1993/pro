@@ -3,8 +3,10 @@ import Navbar from './Componets/Navbar/Navbar';
 import TopMenu from "./Componets/TopMenu/TopMenu";
 import Carousel from "./Componets/Carousel/Carousel";
 import OurMajorProducts from "./Componets/OurMajorProducts/OurMajorProducts";
-import LaptopCards from './Componets/LaptopCards/LaptopCards';
+import CompanyStats from './Componets/CompanyStats/CompanyStats';
 import Partners from './Componets/Partners/Partners';
+import Footer from './Componets/Navbar/Footer/Footer';
+
 
 const App = () => {
   return (
@@ -13,8 +15,11 @@ const App = () => {
       <TopMenu />
       <Carousel />
       <OurMajorProducts />
-        <LaptopCards />
+      <OurMajorProducts />
+      <OurMajorProducts />
+      <CompanyStats />
       <Partners />
+      <Footer />
     
     </div>
   )
