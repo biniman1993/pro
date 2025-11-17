@@ -6,15 +6,15 @@
   text-align: center;
 }
 
-.section-title {
+.top-products-container .section-title {
   font-size: 28px;
   font-weight: 800;
-  color: #0c1529;
+  color:#e67817;
   margin-bottom: 28px;
   letter-spacing: -0.02em;
 }
 
-.products-grid {
+.top-products-container .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 8px;
@@ -22,13 +22,13 @@
   
 }
 
-.flip-card {
+.top-products-container .flip-card {
   width: 100%;
   max-width: 150px;   /* was 200px */
    margin-bottom: 10px; 
 }
 
-.flip-card-inner {
+.top-products-container .flip-card-inner {
   width: 100%;
   height: 150px;      /* was 220px → smaller height */
   background: #fff;
@@ -38,14 +38,14 @@
   transform-style: preserve-3d;
   cursor: pointer;
 }
-.flip-card:hover .flip-card-inner {
+.top-products-container .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg) translateY(-2px);
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
 }
 
 /* Front Side */
-.flip-card-front,
-.flip-card-back {
+.top-products-container .flip-card-front,
+.top-products-container .flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -57,35 +57,35 @@
   align-items: center;
 }
 
-.flip-card-front {
+.top-products-container .flip-card-front {
   background: #ffffff;
 }
 
-.product-img {
+.top-products-container .product-img {
   width: 55px;        /* was 72px */
   margin-bottom: 8px;
 }
 
-.flip-card-front h3 {
+.top-products-container .flip-card-front h3 {
   font-size: 13px;    /* was 15px */
   font-weight: 700;
   margin: 4px 0;
   color: #111827;
 }
 
-.flip-card-front p {
+.top-products-container .flip-card-front p {
   font-size: 11px;    /* was 12px */
   color: #6b7280;
 }
 
 /* Back Side */
-.flip-card-back {
+.top-products-container .flip-card-back {
   background: linear-gradient(135deg, #2563eb, #7c3aed);
   color: white;
   transform: rotateY(180deg);
 }
 
-.view-btn {
+.top-products-container .view-btn {
   margin-top: 10px;
   padding: 6px 14px;
   background: #ffffff;
@@ -98,7 +98,7 @@
 }
 
 
-.view-btn:hover {
+.top-products-container .view-btn:hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.15);
 }
@@ -106,11 +106,11 @@
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
-  .flip-card {
+  .top-products-container .flip-card {
     flex: 0 0 150px;   /* smaller for mobile */
     max-width: 150px;
   }
-  .flip-card-inner {
+  .top-products-container .flip-card-inner {
     height: 160px;
   }
 }

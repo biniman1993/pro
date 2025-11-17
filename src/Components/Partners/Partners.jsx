@@ -84,7 +84,7 @@ const Partners = () => {
       <div className="partners-container">
         <div className="partners-header">
           <h2 className="partners-title">
-            Our Trusted <span className="title-accent">Partners</span>
+            Clintes <span className="title-accent">We Served</span>
           </h2>
           <p className="partners-subtitle">
             Collaborating with industry leaders to deliver excellence and innovation

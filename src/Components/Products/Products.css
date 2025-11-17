@@ -1,0 +1,195 @@
+/* Products.css */
+.latest-products {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.latest-products .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #e67817;
+   opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.6s ease;
+}
+.latest-products .section-title.animate-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.latest-products .products-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  justify-content: center;
+}
+
+.latest-products .product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 420px;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(80px);
+  will-change: transform, box-shadow, opacity;
+  animation-fill-mode: forwards;
+}
+.latest-products .product-card.animate-card {
+  animation: slideUpFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.latest-products .product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+/* ---- HOVER EFFECT ---- */
+.latest-products .product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
+.latest-products .product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+ background: linear-gradient(135deg, #e67817 0%, 
+#67bed9 100%);  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.latest-products .product-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* ------------------------------
+   FIXED TEXT HEIGHTS (ALIGNMENT)
+   ------------------------------ */
+
+.latest-products .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;   /* clean spacing */
+}
+
+/* 2-line fixed product title */
+.latest-products .product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #2d3748;
+  min-height: 48px;
+  max-height: 48px;
+  overflow: hidden;
+  
+}
+
+/* Same height for brand */
+.latest-products .product-brand {
+  font-size: 0.9rem;
+  color: #667eea;
+  font-weight: 500;
+  min-height: 20px;
+}
+
+/* Same height for stock line */
+.latest-products .stock-status {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+}
+
+.latest-products .status-icon {
+  color: #48bb78;
+  font-size: 1rem;
+  margin-right: 6px;
+}
+
+.latest-products .status-text {
+  font-size: 0.9rem;
+  color: #48bb78;
+  font-weight: 500;
+}
+
+/* Same height for price */
+.latest-products .product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #2d3748;
+  min-height: 28px;
+}
+
+/* ---- BUTTON ---- */
+.latest-products .add-to-cart-btn {
+  background: linear-gradient(135deg, #e67817 0%, 
+#4282db 100%);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.latest-products .add-to-cart-btn:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 1200px) {
+  .latest-products .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .latest-products .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .latest-products .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .latest-products .products-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .latest-products .product-card {
+    height: auto;
+    min-height: 250px;
+  }
+}
+@keyframes slideUpFade {
+  from { opacity: 0; transform: translateY(80px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
