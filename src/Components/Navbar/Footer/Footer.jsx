@@ -92,15 +92,15 @@ const Footer = () => {
           <div className="footer-grid">
             {/* Company Info */}
             <div className="footer-column">
-              <h2 className="footer-logo">Unique Business Systems</h2>
+              <h2 className="footer-logo">Proactive Trading</h2>
               <p className="footer-description">
                 Your trusted partner for technology solutions and services in Bangladesh. 
                 We provide comprehensive IT support and innovative business solutions.
               </p>
               <div className="footer-contact">
-                <p>📍 Dhaka, Bangladesh</p>
-                <p>📧 info@uniquebusiness.com</p>
-                <p>📞 +880 1234-567890</p>
+                <p>📍 Addis Ababa, Ethiopia</p>
+                <p>📧 Pro2actives@gmail.com</p>
+                <p>📞 +251911517628</p>
               </div>
             </div>
 

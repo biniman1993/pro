@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./TopProducts.css";
 import laptopImg from "../../assets/laptop.png";
 import projectorImg from "../../assets/printers.jpg";
@@ -37,17 +37,80 @@ const products = [
     count: "83 products",
     img: soundImg,
   },
+   {
+    name: "Sound System",
+    count: "83 products",
+    img: soundImg,
+  },
+   {
+    name: "Sound System",
+    count: "83 products",
+    img: soundImg,
+  },
+   {
+    name: "Sound System",
+    count: "83 products",
+    img: soundImg,
+  },
+   {
+    name: "Sound System",
+    count: "83 products",
+    img: soundImg,
+  },
+  
+  
+  
+  
+  
+
 ];
 
 export default function TopProducts() {
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="top-products-container">
-    <div className="titilemajor"> Major-products-container</div>
-      <h2 className="section-title">Popular Categories</h2>
+    <div className="top-products-container" ref={sectionRef}>
+      <h2
+        className="section-title"
+        style={{
+          opacity: visible ? 1 : 0,
+          transform: visible ? "translateY(0)" : "translateY(12px)",
+          transition: "opacity 600ms ease, transform 600ms ease"
+        }}
+      >
+        Most Popular Products
+      </h2>
 
       <div className="products-grid">
         {products.map((item, index) => (
-          <div className="flip-card" key={index}>
+          <div
+            className="flip-card"
+            key={index}
+            style={{
+              opacity: visible ? 1 : 0,
+              transform: visible ? "translateY(0)" : "translateY(14px)",
+              transition: `opacity 600ms ease ${index * 60}ms, transform 600ms ease ${index * 60}ms`
+            }}
+          >
             <div className="flip-card-inner">
 
               {/* Front side */}

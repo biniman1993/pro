@@ -2,7 +2,7 @@
 .major-products-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -33,10 +33,10 @@
 }
 
 .products-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  padding: 20px 0 7px;
 }
 
 .product-card {
@@ -46,13 +46,29 @@
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   position: relative;
-  flex: 0 0 calc(25% - 20px);
-  max-width: calc(25% - 20px);
-  min-width: 280px;
   opacity: 0;
   transform: translateY(80px);
   animation-fill-mode: forwards;
+  will-change: transform, box-shadow;
+  width: 100%;
 }
+
+/* Glow layer for eye-catching hover */
+.product-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 12px;
+  pointer-events: none;
+  background:
+    radial-gradient(600px 200px at 50% -20%, rgba(255, 152, 0, 0.25) 0%, transparent 60%),
+    radial-gradient(600px 200px at 50% 120%, rgba(102, 126, 234, 0.25) 0%, transparent 60%);
+  opacity: 0;
+  filter: blur(18px);
+  transition: opacity 0.35s ease, filter 0.35s ease;
+  z-index: 0;
+}
+
 
 .product-card.animate-card {
   animation: slideUpFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
@@ -70,8 +86,17 @@
 }
 
 .product-card.animate-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 28px 55px rgba(17, 24, 39, 0.18),
+    0 10px 25px rgba(255, 152, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* Also apply hover effect even before animation completes */
+.product-card:hover::before {
+  opacity: 1;
+  filter: blur(22px);
 }
 
 .product-image {
@@ -171,31 +196,17 @@
   font-size: 1.1rem;
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments (horizontal row) */
 @media (max-width: 1200px) {
-  .product-card {
-    flex: 0 0 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
-  }
+  .products-grid { grid-template-columns: repeat(4, 1fr); }
 }
 
 @media (max-width: 992px) {
-  .product-card {
-    flex: 0 0 calc(50% - 15px);
-    max-width: calc(50% - 15px);
-  }
+  .products-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .products-grid {
-    gap: 20px;
-  }
-  
-  .product-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-    min-width: 100%;
-  }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   
   .section-title {
     font-size: 2rem;
@@ -207,6 +218,7 @@
 }
 
 @media (max-width: 480px) {
+  .products-grid { grid-template-columns: 1fr; }
   .product-details {
     flex-direction: column;
     align-items: flex-start;

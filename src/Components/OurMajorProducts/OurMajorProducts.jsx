@@ -1,6 +1,14 @@
 // OurMajorProducts.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import './OurMajorProducts.css';
+import imgA from '../../assets/laptop/a.jpg';
+import imgB from '../../assets/laptop/b.jpg';
+import imgC from '../../assets/laptop/c.jpg';
+import imgD from '../../assets/laptop/d.png';
+import imgE from '../../assets/laptop/e.png';
+import imgF from '../../assets/laptop/f.png';
+import imgG from '../../assets/laptop/g.png';
+import imgH from '../../assets/laptop/h.png';
 
 const OurMajorProducts = () => {
   const [products] = useState([
@@ -9,7 +17,7 @@ const OurMajorProducts = () => {
       name: "Beno MSS50 3600 Lumens SVGA Business Projector",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=300&h=200&fit=crop",
+      image: imgA,
       action: "Add To Cart"
     },
     {
@@ -17,7 +25,7 @@ const OurMajorProducts = () => {
       name: "MSI M99 Wired RGB Ergonomic Gaming Mouse",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1527814050087-3793815479db?w=300&h=200&fit=crop",
+      image: imgB,
       action: "Add To Cart"
     },
     {
@@ -25,7 +33,7 @@ const OurMajorProducts = () => {
       name: "MSI Modern 14 C11M 11th Gen Intel Core i7 1195G7 14 Inch FHD IPS",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=300&h=200&fit=crop",
+      image: imgC,
       action: "Add To Cart"
     },
     {
@@ -33,7 +41,7 @@ const OurMajorProducts = () => {
       name: "ARMOR AR-B6BIP4A, CCTV Camera",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=300&h=200&fit=crop",
+      image: imgD,
       action: "Add To Cart"
     },
     {
@@ -41,7 +49,7 @@ const OurMajorProducts = () => {
       name: "AOC CU3462X/BK Canon",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      image: imgE,
       action: "Add To Cart"
     },
      {
@@ -49,7 +57,7 @@ const OurMajorProducts = () => {
       name: "AOC CU3462X/BK Canon",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      image: imgF,
       action: "Add To Cart"
     }
     , {
@@ -57,7 +65,7 @@ const OurMajorProducts = () => {
       name: "AOC CU3462X/BK Canon",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      image: imgG,
       action: "Add To Cart"
     },
      {
@@ -65,7 +73,7 @@ const OurMajorProducts = () => {
       name: "AOC CU3462X/BK Canon",
       status: "In stock",
       price: "Call for Price",
-      image: "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=300&h=200&fit=crop",
+      image: imgH,
       action: "Add To Cart"
     }
   ]);
