@@ -1,13 +1,81 @@
-.logo-image {
-  max-width: 100%;
-  max-height: 40px;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+/* Logo scroller - right to left, single row */
+.logo-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 18px 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
 }
 
-.partner-logo:hover .logo-image {
+/* The track that moves. Make sure you render the logos duplicated in JSX */
+.logo-scroll {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  /* animation duration configurable via --scroll-duration */
+  --scroll-duration: 30s;
+  animation: scroll var(--scroll-duration) linear infinite;
+  will-change: transform;
+  /* keep width to intrinsic size so translateX(-50%) works when duplicated */
+  width: max-content;
+}
+
+/* Pause on hover for usability */
+.logo-container:hover .logo-scroll {
+  animation-play-state: paused;
+}
+
+/* Single logo box */
+.logo-item {
+  flex: 0 0 auto;       /* prevents shrinking */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  height: 60px;
+}
+
+/* Image styling */
+.logo-image {
+  max-height: 40px;
+  max-width: 120px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+}
+
+.logo-image:hover {
+  filter: grayscale(0%);
   opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Smooth infinite scroll: move left by half of the track (because you duplicate logos once) */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .logo-scroll { gap: 24px; --scroll-duration: 28s; }
+  .logo-item { padding: 0 16px; height: 56px; }
+  .logo-image { max-height: 36px; max-width: 100px; }
+}
+
+@media (max-width: 768px) {
+  .logo-scroll { gap: 18px; --scroll-duration: 22s; }
+  .logo-item { padding: 0 14px; height: 52px; }
+  .logo-image { max-height: 30px; max-width: 90px; }
+}
+
+@media (max-width: 480px) {
+  .logo-scroll { gap: 12px; --scroll-duration: 18s; }
+  .logo-item { padding: 0 10px; height: 44px; }
+  .logo-image { max-height: 26px; max-width: 80px; }
 }

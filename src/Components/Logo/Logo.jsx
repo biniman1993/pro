@@ -2,30 +2,34 @@ import React from 'react';
 import './Logo.css';
 
 const Logo = () => {
-  const partners = [
-    { id: 1, name: "somop", logo: "/logo/parlogo1.png" },
-    { id: 2, name: "SUPERMICRO", logo: "/logo/parlogo2.png" },
-    { id: 3, name: "ITC", logo: "/logo/parlogo3.png" },
-    { id: 4, name: "CREATE", logo: "/logo/parlogo3.png" },
-    // ... add all 30 partners with their image paths
+  // Replace with your real images later
+  const logos = [
+    { id: 1, src: '/logo/logo1.png' },
+    { id: 2, src: '/logo/logo1.png' },
+    { id: 3, src: '/logo/logo1.png' },
+    { id: 4, src: '/logo/logo1.png' },
+    { id: 5, src: '/logo/logo1.png' },
+    { id: 6, src: '/logo/logo1.png' },
+    { id: 7, src: '/logo/logo1.png' },
+    { id: 8, src: '/logo/logo1.png' },
+    { id: 9, src: '/logo/logo1.png' },
+    { id: 10, src: '/logo/logo1.png' }
   ];
 
-  const duplicatedPartners = [...partners, ...partners];
+  const duplicated = [...logos, ...logos];
 
   return (
-    <div className="partners-section">
-      <div className="partners-container">
-        <div className="partners-track">
-          {duplicatedPartners.map((partner, index) => (
-            <div key={`${partner.id}-${index}`} className="partner-logo">
-              <img 
-                src={partner.logo} 
-                alt={partner.name}
-                className="logo-image"
-              />
-            </div>
-          ))}
-        </div>
+    <div className="logo-container">
+      <div className="logo-scroll">
+        {duplicated.map((logo, index) => (
+          <div key={`${logo.id}-${index}`} className="logo-item">
+            <img 
+              src={logo.src}
+              alt="partner-logo"
+              className="logo-image"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
