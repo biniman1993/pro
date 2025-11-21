@@ -44,7 +44,7 @@
 /* Caption container */
 .caption {
   position: absolute;
-  bottom: 110px;
+  bottom: 120px;
   left: 70px;
   transform: translateY(100px);
   opacity: 0;
@@ -63,7 +63,7 @@
   font-size: 3rem;
   font-weight: 700;
   color: #fff;
-  margin: 0 0 20px 0;
+  margin: 0 0 5px 0;
   text-shadow: 0px 4px 18px rgba(0, 0, 0, 0.4);
 }
 
@@ -71,9 +71,9 @@
 .caption-description {
   font-size: 1.3rem;
   color: #e0e0e0;
-max-width: 1300px;
+  width: 900px;
   line-height: 1.5;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 /* Read More Button */

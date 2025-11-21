@@ -8,6 +8,12 @@ import Footer from './Components/Navbar/Footer/Footer';
 import TopProducts from './Components/TopProducts/TopProducts';
 import Products from './Components/Products/Products';
 import Logo from './Components/logo/Logo';
+import { 
+  laptopsData, 
+  gamingProductsData,
+  officeProductsData
+} from "./Components/Products/productsData.jsx";
+
 
 const App = () => {
   return (
@@ -16,8 +22,32 @@ const App = () => {
       <TopMenu />
       <Carousel />
       <TopProducts />
-      <Products />
-       <Products />
+     
+      {/* Latest Laptops */}
+      <Products 
+        title="Latest Laptops" 
+        productsData={laptopsData}
+      />
+
+      {/* Gaming Products */}
+      <Products 
+        title="Gaming Products" 
+        productsData={gamingProductsData}
+        className="gaming-products"
+      />
+
+      {/* Office Equipment */}
+      <Products 
+        title="Office Equipment" 
+        productsData={officeProductsData}
+        className="office-products"
+      />
+       <Products 
+        title="Office Equipment" 
+        productsData={officeProductsData}
+        className="office-products"
+      />
+      
       <CompanyStats />
       <Partners />
       <Logo />

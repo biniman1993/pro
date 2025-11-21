@@ -6,6 +6,7 @@ import displayImg from "../../assets/Hero.jpg";
 import panelImg from "../../assets/image.png";
 import officeImg from "../../assets/printer.jpg";
 import soundImg from "../../assets/server.png";
+
 const products = [
   {
     name: "Laptop",
@@ -32,36 +33,6 @@ const products = [
     count: "68 products",
     img: officeImg,
   },
-  {
-    name: "Sound System",
-    count: "83 products",
-    img: soundImg,
-  },
-   {
-    name: "Sound System",
-    count: "83 products",
-    img: soundImg,
-  },
-   {
-    name: "Sound System",
-    count: "83 products",
-    img: soundImg,
-  },
-   {
-    name: "Sound System",
-    count: "83 products",
-    img: soundImg,
-  },
-   {
-    name: "Sound System",
-    count: "83 products",
-    img: soundImg,
-  },
-  
-  
-  
-  
-  
 
 ];
 
@@ -88,48 +59,65 @@ export default function TopProducts() {
   }, []);
 
   return (
-    <div className="top-products-container" ref={sectionRef}>
-      <h2
-        className="section-title"
-        style={{
-          opacity: visible ? 1 : 0,
-          transform: visible ? "translateY(0)" : "translateY(12px)",
-          transition: "opacity 600ms ease, transform 600ms ease"
-        }}
-      >
-        Most Popular Products
-      </h2>
+    <div className="topbackground">
+       <div className="top-products-container" ref={sectionRef}>
+      <div className="products-header">
+        <h2
+          className="products-title"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(20px)",
+            transition: "opacity 600ms ease, transform 600ms ease"
+          }}
+        >
+          Most Popular Products
+        </h2>
+        <div 
+          className="title-line"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "scaleX(1)" : "scaleX(0)",
+            transition: "opacity 600ms ease 200ms, transform 600ms ease 200ms"
+          }}
+        ></div>
+        <p 
+          className="products-subtitle"
+          style={{
+            opacity: visible ? 1 : 0,
+            transform: visible ? "translateY(0)" : "translateY(15px)",
+            transition: "opacity 600ms ease 300ms, transform 600ms ease 300ms"
+          }}
+        >
+          Explore our wide range of premium technology solutions
+        </p>
+      </div>
 
       <div className="products-grid">
         {products.map((item, index) => (
           <div
-            className="flip-card"
+            className="product-card"
             key={index}
             style={{
               opacity: visible ? 1 : 0,
-              transform: visible ? "translateY(0)" : "translateY(14px)",
-              transition: `opacity 600ms ease ${index * 60}ms, transform 600ms ease ${index * 60}ms`
+              transform: visible ? "translateY(0)" : "translateY(30px)",
+              transition: `opacity 600ms ease ${index * 80 + 400}ms, transform 600ms ease ${index * 80 + 400}ms`
             }}
           >
-            <div className="flip-card-inner">
-
-              {/* Front side */}
-              <div className="flip-card-front">
-                <img src={item.img} alt={item.name} className="product-img" />
-                <h3>{item.name}</h3>
-                <p>{item.count}</p>
+            <div className="product-image-container">
+              <img src={item.img} alt={item.name} className="product-image" />
+              <div className="product-overlay">
+                <button className="view-button">View More</button>
               </div>
-
-              {/* Back side */}
-              <div className="flip-card-back">
-                <h3>{item.name}</h3>
-                <button className="view-btn">View More</button>
-              </div>
-
+            </div>
+            <div className="product-info">
+              <h3 className="product-name">{item.name}</h3>
+              <p className="product-count">{item.count}</p>
             </div>
           </div>
         ))}
       </div>
     </div>
+    </div>
+   
   );
 }
