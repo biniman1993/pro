@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./TopProducts.css";
-import laptopImg from "../../assets/laptop.png";
-import projectorImg from "../../assets/printers.jpg";
-import displayImg from "../../assets/Hero.jpg";
-import panelImg from "../../assets/image.png";
-import officeImg from "../../assets/printer.jpg";
-import soundImg from "../../assets/server.png";
+import laptopImg from "../../assets/logo/laptoplogo.png";
+import projectorImg from "../../assets/logo/desktoplogo.png";
+import displayImg from "../../assets/logo/monitorlogo.png";
+import panelImg from "../../assets/logo/networkinglogo.png";
+import officeImg from "../../assets/logo/printerlogo.png";
+
 
 const products = [
   {
@@ -14,22 +14,22 @@ const products = [
     img: laptopImg,
   },
   {
-    name: "Projector",
+    name: "Desktop",
     count: "42 products",
     img: projectorImg,
   },
   {
-    name: "Display Solution",
+    name: "Monitor",
     count: "42 products",
     img: displayImg,
   },
   {
-    name: "Interactive Flat Panel",
+    name: "Networking",
     count: "21 products",
     img: panelImg,
   },
   {
-    name: "Office Equipment",
+    name: "Printer",
     count: "68 products",
     img: officeImg,
   },
