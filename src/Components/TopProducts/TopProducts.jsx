@@ -33,7 +33,21 @@ const products = [
     count: "68 products",
     img: officeImg,
   },
-
+ {
+    name: "Printer",
+    count: "68 products",
+    img: officeImg,
+  },
+   {
+    name: "Printer",
+    count: "68 products",
+    img: officeImg,
+  },
+   {
+    name: "Printer",
+    count: "68 products",
+    img: officeImg,
+  },
 ];
 
 export default function TopProducts() {
@@ -60,7 +74,7 @@ export default function TopProducts() {
 
   return (
     <div className="topbackground">
-       <div className="top-products-container" ref={sectionRef}>
+      <div className="top-products-container" ref={sectionRef}>
       <div className="products-header">
         <h2
           className="products-title"
@@ -80,16 +94,7 @@ export default function TopProducts() {
             transition: "opacity 600ms ease 200ms, transform 600ms ease 200ms"
           }}
         ></div>
-        <p 
-          className="products-subtitle"
-          style={{
-            opacity: visible ? 1 : 0,
-            transform: visible ? "translateY(0)" : "translateY(15px)",
-            transition: "opacity 600ms ease 300ms, transform 600ms ease 300ms"
-          }}
-        >
-          Explore our wide range of premium technology solutions
-        </p>
+    
       </div>
 
       <div className="products-grid">

@@ -24,36 +24,44 @@ const Products = ({
   }, []);
 
   return (
-    <div className={`latest-products ${className}`} ref={containerRef}>
-      <h1 className={`section-title ${isVisible ? 'animate-title' : ''}`}>
-        {title}
-      </h1>
+    <div className={`products-section-wrapper`}>
+      <div className={`latest-products ${className}`} ref={containerRef}>
+        <h1 className={`section-title ${isVisible ? 'animate-title' : ''}`}>
+          {title}
+        </h1>
 
-      <div className="products-grid-wrapper">
-        <div className="products-grid">
-          {productsData.map((product, index) => (
-            <div
-              key={product.id}
-              className={`product-card ${isVisible ? 'animate-card' : ''}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {product.image && <img className="product-image" src={product.image} alt={product.name} />}
-              <div className="product-info">
-                <h3 className="product-name">{product.name}</h3>
-                <div className="stock-status">
-                  <span className="status-icon">✔</span>
-                  <span className="status-text">{product.status}</span>
+        <div className="products-grid-wrapper">
+          <div className="products-grid">
+            {productsData.map((product, index) => (
+              <div
+                key={product.id}
+                className={`product-card ${isVisible ? 'animate-card' : ''}`}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {product.image && (
+                  <img
+                    className="product-image"
+                    src={product.image}
+                    alt={product.name}
+                  />
+                )}
+                <div className="product-info">
+                  <h3 className="product-name">{product.name}</h3>
+                  <div className="stock-status">
+                    <span className="status-icon">✔</span>
+                    <span className="status-text">{product.status}</span>
+                  </div>
+                  <p className="product-price">{product.price}</p>
                 </div>
-                <p className="product-price">{product.price}</p>
+                <button className="add-to-cart-btn">Add To Cart</button>
               </div>
-              <button className="add-to-cart-btn">Add To Cart</button>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <button className="forward-icon" onClick={() => console.log('Next Page')}>
-          ➜
-        </button>
+          <button className="forward-icon" onClick={() => console.log('Next Page')}>
+            ➜
+          </button>
+        </div>
       </div>
     </div>
   );
