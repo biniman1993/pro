@@ -65,14 +65,6 @@ const TopMenu = () => {
       "USB Hubs",
       "Laptop Stands"
     ],
-    Gadget: [
-      "Smart Watches",
-      "Smart Home Devices",
-      "Power Banks",
-      "Bluetooth Speakers",
-      "Tablets"
-    ],
-   
     Printer: [
       "Inkjet Printer",
       "Laser Printer",
@@ -108,13 +100,7 @@ const TopMenu = () => {
       "Mixers",
       "Conference Audio Systems"
     ],
-    "Office Equipment": [
-      "Office Phones",
-      "Attendance Machines",
-      "Binding Machines",
-      "Shredders",
-      "Calculators"
-    ]
+    
   };
 const menuItems = Object.keys(menuData);
 
