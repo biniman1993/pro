@@ -5,43 +5,36 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  background: #020320; /* Slight transparent background for overlay */
+  background: #020320;
   color: #ffffff;
-  position: fixed;       /* Change from absolute -> fixed */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;          /* keep it on top */
-  gap: 20px;
+  z-index: 999;
+  gap: 15px;
   box-sizing: border-box;
-  backdrop-filter: blur(10px); /* optional, makes it look modern */
+  backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+    height: 110px;
 }
 
-.navbar{
-height: 200px;
- transform: translateY(-30px);
-
-}
 /* Left: Logo */
 .logo {
   flex-shrink: 0;
-     transform: translateY(-15px);
-
 }
 
 .logo img {
-  height: 100px;
+  height: 80px;
   transition: 0.3s ease;
 }
 
 .logo img:hover {
-  transform: scale(1.05);   /* ✅ slight zoom on hover */
+  transform: scale(1.05);
 }
 
 /* Right: Phone and Email navbar-right */
 .navbar-right {
-   transform: translateY(-15px);
   display: flex;
   align-items: center;
   gap: 15px;
@@ -58,6 +51,7 @@ height: 200px;
 .menu li:hover {
   color: #ff9800;
 }
+
 /* Blog button style */
 ul li.button-item {
   background-color: #ff9800;
@@ -73,13 +67,14 @@ ul li.button-item:hover {
 
 .bars1 {
   display: flex;
-  justify-content: center; /* center the whole list horizontally */
-  gap: 40px; /* spacing between each item */
+  justify-content: center;
+  gap: 40px;
   list-style: none;
   padding: 0;
   margin: 0;
-  align-items: center; /* vertically center items if needed */
+  align-items: center;
 }
+
 .bars1 li {
   font-size: 1rem;
   cursor: pointer;
@@ -96,24 +91,23 @@ ul li.button-item:hover {
 .bars1 li.button-item:hover {
   background-color: #e68900;
 }
+
 /* Full-width horizontal line under navbar */
 nav::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 70px; /* move line 5px below navbar; adjust as needed */
+  bottom: 15px; /* Adjust this to move it up/down */
   width: 100%;
   height: 0.5px;
   background-color: #f0efef;
   opacity: 0.5;
-  z-index: 998;
+  z-index: 1000; /* Increase from 998 to 1000 or higher */
 }
-
 
 /* Menu - Centered */
 .menu {
   display: flex;
-     transform: translateY(-15px);
   gap: 60px;
   list-style: none;
   margin: 0;
@@ -121,7 +115,15 @@ nav::after {
   align-items: center;
   flex: 1;
   justify-content: center;
+
+  /* Inter font */
+  font-family: 'Inter', sans-serif;
+  font-weight: 50; /* Medium weight for nav items */
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
+
 
 /* Contact Info Styles - Modern Animated */
 .contact-info {
@@ -250,6 +252,50 @@ nav::after {
   transition: all 0.1s ease;
 }
 
+/* Search container */
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.search-input {
+  padding: 8px 12px 8px 40px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.3s;
+  width: 200px;
+}
+
+.search-input:focus {
+  border-color: #0071c5;
+  box-shadow: 0 0 8px rgba(0, 113, 197, 0.3);
+}
+
+.search-button {
+  position: absolute;
+  left: 8px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+}
+
+.search-button:hover {
+  color: #0071c5;
+}
+
+.search-icon {
+  width: 18px;
+  height: 18px;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .menu {
@@ -319,49 +365,8 @@ nav::after {
   .navbar-right {
     gap: 8px;
   }
-}
-
-/* Search container */
-.search-container {
-   transform: translateY(-15px);
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin: 0 20px;
-}
-
-.search-input {
-  padding: 8px 12px 8px 40px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: all 0.3s;
-  width: 200px;
-}
-
-.search-input:focus {
-  border-color: #0071c5;
-  box-shadow: 0 0 8px rgba(0, 113, 197, 0.3);
-}
-
-.search-button {
-  position: absolute;
-  left: 8px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #777;
-}
-
-.search-button:hover {
-  color: #0071c5;
-}
-
-.search-icon {
-  width: 18px;
-  height: 18px;
+  
+  .search-input {
+    width: 150px;
+  }
 }

@@ -1,45 +1,53 @@
 /* Products.css */
-.top-products-background {
+.prod-section-wrapper {
   width: 100%;
-  min-height: 100vh;           /* full viewport height */
-  background-color: #ffffff;   /* or gradient / image */
-  background-size: cover;       /* if using image */
+  min-height: 85vh;
+  background-color: #ffffff;
+  background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;      /* center the inner container horizontally */
-  align-items: flex-start;      /* top-align content */
-  padding: 0;                   /* optional: remove any default spacing */
+  margin-bottom: 10px;
+  padding-bottom: 50px;
+  margin-top: 10px;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
 }
-.latest-products {
-  max-width: 1350px;
+
+.prod-container {
+  max-width: 1400px;
+ 
   margin: 0 auto;
   padding: 40px 10px;
   font-family: 'Arial', sans-serif;
+   
 }
 
-.latest-products .section-title {
+.prod-container .prod-title {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
+  padding-top: 10px;
   margin-bottom: 70px;
   color: #e67817;
-   opacity: 0;
+  opacity: 0;
   transform: translateY(-20px);
   transition: all 0.6s ease;
 }
-.latest-products .section-title.animate-title {
+
+.prod-container .prod-title.prod-title-animate {
   opacity: 1;
   transform: translateY(0);
 }
 
-.latest-products .products-grid {
+.prod-container .prod-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
   justify-content: center;
 }
 
-.latest-products .product-card {
+.prod-container .prod-card {
   background: #ffffff;
   border-radius: 12px;
   padding: 24px;
@@ -58,11 +66,11 @@
   animation-fill-mode: forwards;
 }
 
-.latest-products .product-card.animate-card {
-  animation: slideUpFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+.prod-container .prod-card.prod-card-animate {
+  animation: prodSlideUpFade 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.latest-products .product-image {
+.prod-container .prod-img {
   width: 100%;
   height: 160px;
   object-fit: cover;
@@ -70,43 +78,37 @@
   margin-bottom: 12px;
 }
 
-/* ---- HOVER EFFECT ---- */
-.latest-products .product-card:hover {
-  transform: scale(1.08);          /* slightly bigger */
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* stronger shadow */
-  z-index: 20;                     /* bring it above other cards */
+.prod-container .prod-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  z-index: 20;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.latest-products .product-card::before {
+.prod-container .prod-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
- background: linear-gradient(135deg, #e67817 0%, 
-#67bed9 100%);  transform: scaleX(0);
+  background: linear-gradient(135deg, #e67817 0%, #67bed9 100%);
+  transform: scaleX(0);
   transition: transform 0.3s ease;
 }
 
-.latest-products .product-card:hover::before {
+.prod-container .prod-card:hover::before {
   transform: scaleX(1);
 }
 
-/* ------------------------------
-   FIXED TEXT HEIGHTS (ALIGNMENT)
-   ------------------------------ */
-
-.latest-products .product-info {
+.prod-container .prod-info {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 6px;   /* clean spacing */
+  gap: 6px;
 }
 
-/* 2-line fixed product title */
-.latest-products .product-name {
+.prod-container .prod-name {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.4;
@@ -114,48 +116,35 @@
   min-height: 48px;
   max-height: 48px;
   overflow: hidden;
-  
 }
 
-/* Same height for brand */
-.latest-products .product-brand {
-  font-size: 0.9rem;
-  color: #667eea;
-  font-weight: 500;
-  min-height: 20px;
-}
-
-/* Same height for stock line */
-.latest-products .stock-status {
+.prod-container .prod-stock {
   display: flex;
   align-items: center;
   min-height: 24px;
 }
 
-.latest-products .status-icon {
+.prod-container .prod-stock-icon {
   color: #48bb78;
   font-size: 1rem;
   margin-right: 6px;
 }
 
-.latest-products .status-text {
+.prod-container .prod-stock-text {
   font-size: 0.9rem;
   color: #48bb78;
   font-weight: 500;
 }
 
-/* Same height for price */
-.latest-products .product-price {
+.prod-container .prod-price {
   font-size: 1.1rem;
   font-weight: 700;
   color: #2d3748;
   min-height: 28px;
 }
 
-/* ---- BUTTON ---- */
-.latest-products .add-to-cart-btn {
-  background: linear-gradient(135deg, #e67817 0%, 
-#4282db 100%);
+.prod-container .prod-cart-btn {
+  background: linear-gradient(135deg, #e67817 0%, #4282db 100%);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -169,21 +158,22 @@
   letter-spacing: 0.5px;
 }
 
-.latest-products .add-to-cart-btn:hover {
+.prod-container .prod-cart-btn:hover {
   background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
-.products-grid-wrapper {
+
+.prod-grid-wrapper {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* grid stays left-aligned */
+  justify-content: flex-start;
 }
 
-.forward-icon {
+.prod-forward-btn {
   position: absolute;
-  right: -60px;                     /* slightly outside the grid */
+  right: -60px;
   top: 50%;
   transform: translateY(-50%);
   width: 50px;
@@ -201,39 +191,40 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
-.forward-icon:hover {
+.prod-forward-btn:hover {
   transform: translateY(-50%) scale(1.15);
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
   background: linear-gradient(135deg, #67bed9, #e67817);
 }
-/* Responsive design */
+
 @media (max-width: 1200px) {
-  .latest-products .products-grid {
+  .prod-container .prod-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
-  .latest-products .products-grid {
+  .prod-container .prod-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .latest-products .section-title {
+  .prod-container .prod-title {
     font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .latest-products .products-grid {
+  .prod-container .prod-grid {
     grid-template-columns: 1fr;
   }
   
-  .latest-products .product-card {
+  .prod-container .prod-card {
     height: auto;
     min-height: 250px;
   }
 }
-@keyframes slideUpFade {
+
+@keyframes prodSlideUpFade {
   from { opacity: 0; transform: translateY(80px); }
   to   { opacity: 1; transform: translateY(0); }
 }

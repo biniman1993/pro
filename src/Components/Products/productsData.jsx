@@ -46,3 +46,11 @@ export const officeProductsData = [
   { id: 25, name: "MSI Modem 14 C11M 11th Gen Intel Core i7 1195G7 14 Inch FHD IPS", status: "Available on backorder", price: "Call for Price", image: imgE }
   // Add more products as needed
   ]
+    export const displayProductsData = [
+{ id: 26, name: "LEXIN JP-630C PAPER SHREDDER", status: "In stock", price: "Call for Price", image: imgA },
+  { id: 27, name: "Beno MSS50 3600 Lumens SVGA Business Projector", status: "In stock", price: "Call for Price", image: imgB },
+  { id: 28, name: "MSI M99 Wired RGB Ergonomic Gaming Mouse", status: "In stock", price: "Call for Price", image: imgC },
+  { id: 29, name: "ASTHA UV-106M10 FAKE NOTE DETECTOR MACHINE", status: "In stock", price: "Call for Price", image: imgD },
+  { id: 30, name: "MSI Modem 14 C11M 11th Gen Intel Core i7 1195G7 14 Inch FHD IPS", status: "Available on backorder", price: "Call for Price", image: imgE }
+  // Add more products as needed
+  ]

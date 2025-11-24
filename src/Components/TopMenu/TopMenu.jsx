@@ -1,8 +1,33 @@
-import React, { useState } from "react";
+
+import React, { useState, useEffect } from "react"
 import "./TopMenu.css";
 
 const TopMenu = () => {
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down & past 100px - hide menu
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show menu
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
 
   const menuData = {
     Desktop: [
@@ -91,11 +116,13 @@ const TopMenu = () => {
       "Calculators"
     ]
   };
-
-  const menuItems = Object.keys(menuData);
+const menuItems = Object.keys(menuData);
 
   return (
-    <div className="topmenu" onMouseLeave={() => setHoveredItem(null)}>
+    <div 
+      className={`topmenu ${isVisible ? 'topmenu-visible' : 'topmenu-hidden'}`} 
+      onMouseLeave={() => setHoveredItem(null)}
+    >
       <ul>
         {menuItems.map((item, index) => (
           <li
@@ -104,7 +131,6 @@ const TopMenu = () => {
             className={hoveredItem === item ? "active" : ""}
           >
             {item}
-            {/* Dropdown for each menu item */}
             {hoveredItem === item && (
               <div 
                 className="dropdown-menu show"

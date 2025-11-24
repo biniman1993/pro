@@ -72,14 +72,7 @@ const Partners = () => {
       modalTitle: "Intel-Powered Performance Solutions",
       modalBody: "Our partnership with Intel enables us to provide cutting-edge processor technology and computing solutions. We deliver systems powered by the latest Intel innovations, ensuring maximum performance and reliability for our clients."
     },
-     { 
-      id: 8, 
-      name: "Intel", 
-      description: "Processor Technology Leader", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/03/Intel-Logo.png",
-      modalTitle: "Intel-Powered Performance Solutions",
-      modalBody: "Our partnership with Intel enables us to provide cutting-edge processor technology and computing solutions. We deliver systems powered by the latest Intel innovations, ensuring maximum performance and reliability for our clients."
-    },
+    
   ];
   
 
@@ -111,6 +104,7 @@ const Partners = () => {
 
   return (
     <section className="partners-section">
+    <div className="partners-grid partners-grid-4"></div>
       <div className="partners-container">
         <div className="partners-header">
           <h2 className="partners-title">

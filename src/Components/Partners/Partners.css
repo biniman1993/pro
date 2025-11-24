@@ -7,7 +7,7 @@
 }
 
 .partners-container {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 0 auto;
   position: relative;
 }
@@ -63,7 +63,7 @@
 .partner-card {
   background: #ffffff;
   border-radius: 16px;
-  padding: 35px 25px;
+  padding: 30px 20px;
   text-align: center;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
   border: 1px solid #f0f0f0;
