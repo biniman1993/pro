@@ -29,7 +29,14 @@ const Products = React.forwardRef(({
         <h1 className={`prod-title ${isVisible ? 'prod-title-animate' : ''}`}>
           {title}
         </h1>
-
+ <div
+  className="title-line2"
+  style={{
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "scaleX(1)" : "scaleX(0)",
+    transition: "opacity 600ms ease 200ms, transform 600ms ease 200ms",
+  }}
+></div>
         <div className="prod-grid-wrapper">
           <div className="prod-grid">
             {productsData.map((product, index) => (

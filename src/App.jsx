@@ -16,6 +16,7 @@ import {
   printersProductsData,
   CiscoProductsData
 } from "./Components/Products/productsData.jsx";
+import Contact from "./Components/Contact/Contact.jsx";
 
 const App = () => {
   // Refs for smooth scrolling
@@ -68,7 +69,7 @@ const App = () => {
           ref={laptopsRef}
         />
         <Products 
-          title="Gaming Products" 
+          title="Desktop Products" 
           productsData={gamingProductsData}
           ref={gamingRef}
         />

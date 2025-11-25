@@ -46,6 +46,7 @@ nav {
   cursor: pointer;
   transition: color 0.3s ease;
   position: relative;
+  text-transform: capitalize;
 }
 
 .menu li:hover {
@@ -108,7 +109,7 @@ nav::after {
 /* Menu - Centered */
 .menu {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -118,7 +119,7 @@ nav::after {
 
   /* Inter font */
   font-family: 'Inter', sans-serif;
-  font-weight: 50; /* Medium weight for nav items */
+  font-weight: 60; /* Medium weight for nav items */
   font-size: 16px;
   letter-spacing: 0.5px;
   text-transform: uppercase;

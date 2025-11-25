@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './Partners.css';
-import ethiopianLogo from '../../assets/ethoair.png';
+import ethiopianLogo from '../../assets/awardlogo/ethoair.png';
+import cbe from '../../assets/awardlogo/cbe1.png';
+import aaw from '../../assets/awardlogo/addis.png';
+import baw from '../../assets/awardlogo/helth.png';
+import caw from '../../assets/awardlogo/prim.png';
+import daw from '../../assets/awardlogo/trad.png';
+import eaw from '../../assets/awardlogo/def.png';
+import faw from '../../assets/awardlogo/insa.png';
+import gaw from '../../assets/awardlogo/trad.png';
+
 
 
 const Partners = () => {
@@ -20,7 +29,7 @@ const Partners = () => {
       id: 2, 
       name: "HP", 
       description: "Computing Solutions Provider", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/06/HP-Logo.png",
+      logo: cbe,
       modalTitle: "Empowering Business with HP Technology",
       modalBody: "Our partnership with HP has enabled us to deliver cutting-edge computing solutions. From enterprise servers to personal workstations, we provide comprehensive HP products that drive productivity and innovation across industries."
     },
@@ -28,7 +37,7 @@ const Partners = () => {
       id: 3, 
       name: "Dell", 
       description: "Enterprise Technology Partner", 
-      logo: "https://logos-world.net/wp-content/uploads/2017/06/Dell-Logo.png",
+      logo: baw,
       modalTitle: "Dell Enterprise Solutions Excellence",
       modalBody: "As a trusted Dell partner, we supply premium enterprise technology solutions including servers, storage systems, and professional workstations. Our commitment ensures reliable, high-performance systems for demanding business environments."
     },
@@ -36,7 +45,7 @@ const Partners = () => {
       id: 4, 
       name: "Lenovo", 
       description: "Innovation & Performance", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Lenovo-Logo.png",
+      logo: aaw,
       modalTitle: "Lenovo Innovation for Modern Workplaces",
       modalBody: "Through our partnership with Lenovo, we deliver innovative laptops, desktops, and data center solutions. Our expertise ensures organizations receive reliable technology that enhances productivity and drives digital transformation."
     },
@@ -44,7 +53,7 @@ const Partners = () => {
       id: 5, 
       name: "Microsoft", 
       description: "Software & Cloud Solutions", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Microsoft-Logo.png",
+      logo: caw,
       modalTitle: "Microsoft Solutions for Digital Success",
       modalBody: "We provide comprehensive Microsoft solutions including software licenses, cloud services, and enterprise applications. Our partnership ensures businesses have access to cutting-edge tools that empower teams and transform operations."
     },
@@ -52,7 +61,7 @@ const Partners = () => {
       id: 6, 
       name: "Canon", 
       description: "Imaging & Printing Solutions", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/05/Canon-Logo.png",
+      logo: daw,
       modalTitle: "Canon Quality Imaging Solutions",
       modalBody: "As a Canon partner, we deliver professional-grade printers, scanners, and imaging solutions. Our commitment to quality ensures organizations receive reliable equipment that meets the highest standards of performance and durability."
     },
@@ -60,7 +69,7 @@ const Partners = () => {
       id: 7, 
       name: "Apple", 
       description: "Premium Technology Partner", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/04/Apple-Logo.png",
+      logo: eaw,
       modalTitle: "Apple Innovation & Design Excellence",
       modalBody: "We supply premium Apple products including MacBooks, iMacs, and iPads for creative professionals and enterprises. Our expertise ensures clients receive authentic products with comprehensive support and service excellence."
     },
@@ -68,7 +77,7 @@ const Partners = () => {
       id: 8, 
       name: "Intel", 
       description: "Processor Technology Leader", 
-      logo: "https://logos-world.net/wp-content/uploads/2020/03/Intel-Logo.png",
+      logo: faw,
       modalTitle: "Intel-Powered Performance Solutions",
       modalBody: "Our partnership with Intel enables us to provide cutting-edge processor technology and computing solutions. We deliver systems powered by the latest Intel innovations, ensuring maximum performance and reliability for our clients."
     },
