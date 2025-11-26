@@ -11,27 +11,25 @@
   align-items: center;
 }
 
-/* The track that moves. Make sure you render the logos duplicated in JSX */
+/* The scrolling track */
 .logo-scroll {
   display: flex;
   gap: 30px;
   align-items: center;
-  /* animation duration configurable via --scroll-duration */
   --scroll-duration: 30s;
   animation: scroll var(--scroll-duration) linear infinite;
   will-change: transform;
-  /* keep width to intrinsic size so translateX(-50%) works when duplicated */
   width: max-content;
 }
 
-/* Pause on hover for usability */
+/* Pause on hover */
 .logo-container:hover .logo-scroll {
   animation-play-state: paused;
 }
 
-/* Single logo box */
+/* Each logo box */
 .logo-item {
-  flex: 0 0 auto;       /* prevents shrinking */
+  flex: 0 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,23 +37,19 @@
   height: 60px;
 }
 
-/* Image styling */
+/* Image styling - original colors preserved */
 .logo-image {
-  max-height: 40px;
+  max-height: 140px;
   max-width: 120px;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.7;
-  transition: transform .25s ease, opacity .25s ease, filter .25s ease;
+  transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
 .logo-image:hover {
-  filter: grayscale(0%);
-  opacity: 1;
   transform: scale(1.05);
 }
 
-/* Smooth infinite scroll: move left by half of the track (because you duplicate logos once) */
+/* Smooth infinite scroll */
 @keyframes scroll {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }

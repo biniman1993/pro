@@ -65,9 +65,7 @@ const Products = React.forwardRef(({
             ))}
           </div>
 
-          <button className="prod-forward-btn" onClick={() => console.log('Next Page')}>
-            ➜
-          </button>
+         
         </div>
       </div>
     </div>

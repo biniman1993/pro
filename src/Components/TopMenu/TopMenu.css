@@ -4,7 +4,7 @@
   top: 100px; /* Adjust based on navbar height */
   left: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 100;
   background: #020320;
   padding: 10px 0;
   display: flex;
@@ -38,6 +38,8 @@
   padding: 0 25px;
   white-space: nowrap;
   position: relative;
+    text-transform: capitalize;
+
 }
 
 /* Top menu items */

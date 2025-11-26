@@ -1,19 +1,29 @@
 import React from 'react';
 import './Logo.css';
 
+// Import images explicitly
+import addis from '../../assets/awardlogo/addis.png';
+import cbe1 from '../../assets/awardlogo/cbe1.png';
+import def from '../../assets/awardlogo/def.png';
+import ethoair from '../../assets/awardlogo/ethoair.png';
+import helth from '../../assets/awardlogo/helth.png';
+import image from '../../assets/awardlogo/image.png';
+import insa from '../../assets/awardlogo/insa.png';
+import prim from '../../assets/awardlogo/prim.png';
+import trad from '../../assets/awardlogo/trad.png';
+
 const Logo = () => {
-  // Replace with your real images later
   const logos = [
-    { id: 1, src: '/logo/logo1.png' },
-    { id: 2, src: '/logo/logo1.png' },
-    { id: 3, src: '/logo/logo1.png' },
-    { id: 4, src: '/logo/logo1.png' },
-    { id: 5, src: '/logo/logo1.png' },
-    { id: 6, src: '/logo/logo1.png' },
-    { id: 7, src: '/logo/logo1.png' },
-    { id: 8, src: '/logo/logo1.png' },
-    { id: 9, src: '/logo/logo1.png' },
-    { id: 10, src: '/logo/logo1.png' }
+    { id: 1, src: addis },
+    { id: 2, src: cbe1 },
+    { id: 3, src: def },
+    { id: 4, src: ethoair },
+    { id: 5, src: helth },
+    { id: 6, src: image },
+    { id: 7, src: insa },
+    { id: 8, src: prim },
+    { id: 9, src: trad },
+    { id: 10, src: def }
   ];
 
   const duplicated = [...logos, ...logos];

@@ -1,8 +1,16 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png"; // make sure your logo exists
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate('/login');
+  };
   return (
     <nav className="navbar">
       {/* Left: Logo */}
@@ -61,6 +69,14 @@ const Navbar = () => {
           </div>
           <span className="contact-text">Pro2actives@gmail.com</span>
         </a>
+          {/* Sign In Button */}
+    <button 
+        className="contact-info sign-in-button" 
+        onClick={handleSignIn}
+      >
+        Sign In
+      </button>
+
       </div>
     </nav>
   );

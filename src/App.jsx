@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import TopMenu from "./Components/TopMenu/TopMenu";
 import Carousel from "./Components/Carousel/Carousel";
@@ -8,6 +9,8 @@ import Footer from './Components/Navbar/Footer/Footer';
 import TopProducts from './Components/TopProducts/TopProducts';
 import Products from './Components/Products/Products';
 import Logo from './Components/logo/Logo';
+import Login from "./Components/Login/Login.jsx";
+
 import { 
   laptopsData, 
   gamingProductsData,
@@ -16,7 +19,6 @@ import {
   printersProductsData,
   CiscoProductsData
 } from "./Components/Products/productsData.jsx";
-import Contact from "./Components/Contact/Contact.jsx";
 
 const App = () => {
   // Refs for smooth scrolling
@@ -52,6 +54,10 @@ const App = () => {
   };
 
   return (
+    <Router>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={
     <div>
       <Navbar />
       <TopMenu />
@@ -95,6 +101,10 @@ const App = () => {
         <Footer />
       </div>
     </div>
+      } />
+      </Routes>
+    </Router>
+    
   );
 }
 

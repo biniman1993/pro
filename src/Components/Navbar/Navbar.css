@@ -5,13 +5,14 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
+  
   background: #020320;
   color: #ffffff;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 99;
   gap: 15px;
   box-sizing: border-box;
   backdrop-filter: blur(10px);
@@ -27,6 +28,8 @@ nav {
 .logo img {
   height: 80px;
   transition: 0.3s ease;
+margin-left: 1px;
+margin-right: 1px;
 }
 
 .logo img:hover {
@@ -98,7 +101,7 @@ nav::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: 15px; /* Adjust this to move it up/down */
+  bottom: 13px; /* Adjust this to move it up/down */
   width: 100%;
   height: 0.5px;
   background-color: #f0efef;
@@ -109,19 +112,21 @@ nav::after {
 /* Menu - Centered */
 .menu {
   display: flex;
-  gap: 50px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   padding: 0;
   align-items: center;
   flex: 1;
   justify-content: center;
-
+ margin-right: 5px;
+ 
   /* Inter font */
   font-family: 'Inter', sans-serif;
-  font-weight: 60; /* Medium weight for nav items */
+  font-weight: 70; /* Medium weight for nav items */
   font-size: 16px;
   letter-spacing: 0.5px;
+   font-size: 15px;
   text-transform: uppercase;
 }
 
@@ -258,9 +263,8 @@ nav::after {
   position: relative;
   display: flex;
   align-items: center;
-  margin: 0 20px;
+  margin-right: 20px; /* reduce space on the right */
 }
-
 .search-input {
   padding: 8px 12px 8px 40px;
   border-radius: 25px;
@@ -296,7 +300,24 @@ nav::after {
   width: 18px;
   height: 18px;
 }
+.sign-in-button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+.sign-in-button:hover {
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.2), rgba(255, 193, 7, 0.15));
+  border-color: rgba(255, 152, 0, 0.6);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 25px rgba(255, 152, 0, 0.3), 0 0 20px rgba(255, 152, 0, 0.2);
+}
 /* Responsive Design */
 @media (max-width: 1200px) {
   .menu {

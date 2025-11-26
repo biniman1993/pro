@@ -1,6 +1,6 @@
 /* Partners Section */
 .partners-section {
-  padding: 100px 40px;
+  padding: 40px 40px;
   background: #ffffff;
   position: relative;
   overflow: hidden;
@@ -23,6 +23,7 @@
   font-weight: 800;
   color: #1a1a1a;
   margin-bottom: 20px;
+  margin-top: 1px;
   position: relative;
   display: inline-block;
 }

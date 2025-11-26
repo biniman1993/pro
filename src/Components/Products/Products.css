@@ -1,7 +1,7 @@
 /* Products.css */
 .prod-section-wrapper {
   width: 100%;
-  min-height: 90vh;
+  min-height: 93vh;
   background-color: #ffffff;
   background-size: cover;
   background-position: center;
@@ -46,8 +46,8 @@
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  padding-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 30px;
+  margin-bottom: 15px;
   color: #e67817;
   opacity: 0;
   transform: translateY(-20px);
