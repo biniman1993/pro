@@ -14,13 +14,22 @@
   padding: 0;
 }
 .title-line2 {
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(90deg, #e67817, #2596be);
-  margin: 0 auto 20px;
-  border-radius: 2px;
+  width: 100%;
+  height: 1px;
+  
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #e67817 20%,
+    #2596be 80%,
+    transparent 100%
+  );
+  margin: 0 auto 40px;
+  border-radius: 1px;
   transform-origin: center;
+  position: relative;
 }
+
 .prod-container {
   max-width: 1400px;
  
@@ -44,11 +53,10 @@
 }
 .prod-container .prod-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3rem;
   padding-top: 30px;
-  margin-bottom: 15px;
-  color: #e67817;
+  margin-bottom: 20px;
+  color: #1d1c1b;
   opacity: 0;
   transform: translateY(-20px);
   transition: all 0.6s ease;
@@ -166,7 +174,7 @@
 }
 
 .prod-container .prod-cart-btn {
-  background: linear-gradient(135deg, #e67817 0%, #4282db 100%);
+  background: linear-gradient(135deg, #1c4c97 0%, #1c4c97 100%);
   color: white;
   border: none;
   padding: 12px 20px;

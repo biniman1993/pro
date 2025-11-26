@@ -12,7 +12,7 @@ import img7 from "../../assets/cisco.jpg";
 
 const slides = [
   {
-    image: img1,
+    image: img2,
     title: "Printing Solutions",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque ac lorem ultrices faucibus. Integer tincidunt, odio in dignissim aliquet, lacus odio ullamcorper nibh, a feugiat lorem sapien eget turpis."
   },

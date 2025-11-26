@@ -1,9 +1,8 @@
 import React from "react";
 import "./Navbar.css";
-import logo from "../../assets/logo.png"; // make sure your logo exists
+import logo from "../../assets/logo.png";
 import { useNavigate } from 'react-router-dom';
-
-
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -11,6 +10,7 @@ const Navbar = () => {
   const handleSignIn = () => {
     navigate('/login');
   };
+
   return (
     <nav className="navbar">
       {/* Left: Logo */}
@@ -20,13 +20,14 @@ const Navbar = () => {
 
       {/* Center: Navigation Menu */}
       <ul className="menu">
-        <li>Home</li>
-        <li>About Us</li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About Us</Link></li>
         <li>TopProduct</li>
-        <li>Brand</li>
-        <li>Contact Us</li>
+        <li> <Link to="/brand">Brand</Link></li>
+        <li><Link to="/contact">Contact Us</Link></li>
       </ul>
-   {/* Search Container */}
+
+      {/* Search Container */}
       <div className="search-container">
         <input
           type="text"
@@ -49,6 +50,7 @@ const Navbar = () => {
           </svg>
         </button>
       </div>
+
       {/* Right: Phone and Email */}
       <div className="navbar-right">
         <a href="tel:+1234567890" className="contact-info phone-link">
@@ -69,14 +71,14 @@ const Navbar = () => {
           </div>
           <span className="contact-text">Pro2actives@gmail.com</span>
         </a>
-          {/* Sign In Button */}
-    <button 
-        className="contact-info sign-in-button" 
-        onClick={handleSignIn}
-      >
-        Sign In
-      </button>
 
+        {/* Sign In Button */}
+        <button 
+          className="contact-info sign-in-button" 
+          onClick={handleSignIn}
+        >
+          Sign In
+        </button>
       </div>
     </nav>
   );

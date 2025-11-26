@@ -10,6 +10,10 @@ import TopProducts from './Components/TopProducts/TopProducts';
 import Products from './Components/Products/Products';
 import Logo from './Components/logo/Logo';
 import Login from "./Components/Login/Login.jsx";
+import Discount from "./Components/Discount/Discount.jsx";
+import Brand from "./Components/Brand/Brand.jsx";
+import ContactPage from "./Components/style/ContactPage.jsx";
+import About from "./Components/About/About.jsx";
 
 import { 
   laptopsData, 
@@ -19,6 +23,7 @@ import {
   printersProductsData,
   CiscoProductsData
 } from "./Components/Products/productsData.jsx";
+import About from "./Components/About/About.jsx";
 
 const App = () => {
   // Refs for smooth scrolling
@@ -55,22 +60,26 @@ const App = () => {
 
   return (
     <Router>
+     <Navbar />
+    <TopMenu />
+    
       <Routes>
+ <Route path="/brand" element={<Brand />} />
+ <Route path="/about" element={<About />} />
+         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={
     <div>
-      <Navbar />
-      <TopMenu />
-      
+     
       {/* Add margin to main content to account for fixed navbar + TopMenu */}
       <div style={{ marginTop: '110px' }}>
         <Carousel />
-        
+        <Discount />
         <TopProducts onViewMore={scrollToSection} />
 
         {/* Products sections with refs */}
         <Products 
-          title="Latest Laptops" 
+          title="Top-Rated Performance Laptops" 
           productsData={laptopsData}
           ref={laptopsRef}
         />
@@ -98,11 +107,13 @@ const App = () => {
         <CompanyStats />
         <Partners />
         <Logo />
-        <Footer />
+      
+       
       </div>
     </div>
       } />
       </Routes>
+        <Footer />
     </Router>
     
   );
