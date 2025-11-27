@@ -14,7 +14,6 @@ import Discount from "./Components/Discount/Discount.jsx";
 import Brand from "./Components/Brand/Brand.jsx";
 import ContactPage from "./Components/style/ContactPage.jsx";
 import About from "./Components/About/About.jsx";
-import Catalog from "./pages/Catalog.jsx";
 
 import { 
   laptopsData, 
@@ -24,6 +23,7 @@ import {
   printersProductsData,
   CiscoProductsData
 } from "./Components/Products/productsData.jsx";
+import Catalog from './pages/Catalog';
 
 const App = () => {
   // Refs for smooth scrolling
@@ -107,8 +107,8 @@ const App = () => {
         <CompanyStats />
         <Partners />
         <Logo />
-      
-        <Catalog />
+      <Catalog />
+       
       </div>
     </div>
       } />

@@ -249,7 +249,7 @@ const About = () => {
       <main className="content-wrapper vertical-layout">
         {/* Profile Section */}
         <section ref={profileRef} className="content-section">
-          <h2 className="section-title">Our Profile</h2>
+          <h2 className="section-title">Proactive Trading</h2>
           <div className="section-content">
             <p>
               Founded in <span className="gradient-text" style={{ fontWeight: 700 }}>2022</span>,
