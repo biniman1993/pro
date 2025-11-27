@@ -3,7 +3,6 @@ import { Mail, Phone, MapPin, Send, Headphones, Shield, Zap, Facebook, Twitter, 
 import "./ContactPage.css";
 import Navbar from '../Navbar/Navbar';
 import TopMenu from '../TopMenu/TopMenu';
-import Footer from '../Navbar/Footer/Footer';
 
 
 
